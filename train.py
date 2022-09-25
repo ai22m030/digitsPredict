@@ -35,7 +35,8 @@ if __name__ == '__main__':
                   metrics=["accuracy"])
 
     # Train model
-    model.fit(x_train, y_train, batch_size=128, epochs=5, verbose=1, validation_data=(x_test, y_test))
+    model.fit(x_train, y_train, batch_size=128, epochs=1, verbose=1, validation_data=(x_test, y_test))
+    loss, accuracy = model.evaluate(x_test, y_test)
     model.save(filename)
 
-    print(f"The model was saved as '{filename}' and can be used with consume.py -m {filename}")
+    print(f"The model was saved as '{filename}' (accuracy={round(accuracy*100, 2)}%) and can be used with consume.py -m {filename}")
