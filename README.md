@@ -4,11 +4,11 @@ This is a repository for the group project in Software Engineering.
 
 ## Group 
 
-| Name | ID |
-|:-----|:--:|
-| Anna Majewski | ai22m049 |
-| Christina Sturath | ai22m032 |
-| Adnan Vatric | ai22m030 |
+| Name | ID | Email |
+|:-----|:--:| :----- |
+| Anna Majewski | ai22m049 | ai22m049@technikum-wien.at |
+| Christina Sturath | ai22m032 | ai22m032@technikum-wien.at |
+| Adnan Vatric | ai22m030 | ai22m030@technikum-wien.at |
 
 ## Description
 
@@ -23,6 +23,6 @@ The group project will lead through many of the steps of software development.
 ## Assignments
 
 ### [01] Create two applications for training / consuming the model.
-The training application should use public resources as input, train a model to correctly classify images and persist the model.
+The training application should use public resources as input, train a model to correctly classify images and persist the model.  
 The consumer application should load a model, load an image and return the predicted number. 
 
