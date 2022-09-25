@@ -7,6 +7,8 @@ import os
 
 # Default value for model
 model_name = "assignment01_model.h5"
+
+# Parse arguments
 parser = argparse.ArgumentParser(
     prog="Use a previously trained model to predict a handwritten digit.",
     formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -26,10 +28,10 @@ if not args.image:
     exit("Error: No image provided. Please use -i file")
 filename = args.image
 
-# Loading and preprocessing of image (resize, grayscale)
-im = imageio.imread(filename)
-im = cv2.resize(im, (28, 28))
-gray = np.dot(im[...,:3], [0.299, 0.587, 0.114])
+# Load and preprocess image (resize, grayscale)
+image = imageio.imread(filename)
+image = cv2.resize(image, (28, 28))
+gray = np.dot(image[...,:3], [0.299, 0.587, 0.114])
 gray = gray.reshape(1, 28, 28, 1)
 gray /= 255
 
