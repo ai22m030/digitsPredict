@@ -16,7 +16,6 @@ from matplotlib import pyplot as plt
 num_classes = 10
 img_rows, img_cols = 28, 28
 
-'''
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 x_train = x_train.reshape(x_train.shape[0], img_rows, img_cols, 1)
 x_test = x_test.reshape(x_test.shape[0], img_rows, img_cols, 1)
@@ -24,6 +23,7 @@ x_test = x_test.reshape(x_test.shape[0], img_rows, img_cols, 1)
 x_train = x_train.astype('float64')
 x_test = x_test.astype('float64')
 
+'''
 y_train = to_categorical(y_train, num_classes)
 y_test = to_categorical(y_test, num_classes)
 
@@ -64,14 +64,19 @@ gray = np.dot(im[..., :3], [0.299, 0.587, 0.114])
 
 # gray = asarray(im)
 
-plt.imshow(gray, cmap=plt.get_cmap('gray'))
+# plt.imshow(gray, cmap=plt.get_cmap('gray'))
+# plt.show()
+
+plt.imshow(x_test[3], cmap=plt.get_cmap('gray'))
 plt.show()
 
 # gray /= 255
 
+
 model = load_model("test_model.h5")
-prediction = model.predict(gray)
+prediction = model.predict(x_test)
 print(prediction.argmax())
+print(prediction)
 
 '''
 image_index = 35
