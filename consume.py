@@ -37,7 +37,7 @@ image = imageio.imread(filename)
 image = cv2.resize(image, (28, 28))
 gray = np.dot(image[..., :3], [0.299, 0.587, 0.114])
 gray = gray.reshape(1, 28, 28, 1)
-gray /= 255
+gray /= 255.0
 
 # Predict digit based on loaded model
 model = load_model(model_name)
