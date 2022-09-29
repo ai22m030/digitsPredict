@@ -5,6 +5,9 @@ import argparse
 import cv2
 import os
 
+
+
+
 # Default value for model
 model_name = "assignment01_model.h5"
 
