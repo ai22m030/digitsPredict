@@ -35,7 +35,7 @@ if __name__ == '__main__':
                   metrics=["accuracy"])
 
     # Train model
-    model.fit(x_train, y_train, batch_size=128, epochs=5, verbose=1, validation_data=(x_test, y_test))
+    model.fit(x_train, y_train, batch_size=128, epochs=15, verbose=1, validation_data=(x_test, y_test))
     loss, accuracy = model.evaluate(x_test, y_test)
     model.save(filename)
 

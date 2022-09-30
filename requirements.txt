@@ -17,7 +17,7 @@ Keras-Preprocessing==1.1.2
 libclang==14.0.6
 Markdown==3.4.1
 MarkupSafe==2.1.1
-numpy==1.23.3
+numpy~=1.23.2
 oauthlib==3.2.1
 opencv-python==4.6.0.66
 opt-einsum==3.3.0
@@ -42,3 +42,5 @@ typing_extensions==4.3.0
 urllib3==1.26.12
 Werkzeug==2.2.2
 wrapt==1.14.1
+
+flask~=2.2.2
