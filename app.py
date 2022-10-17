@@ -30,7 +30,7 @@ def upload_files():
 
 @app.route('/', methods=['GET'])
 def prediction():
-    predict_file_name = request.args.get('file_name')
+    predict_file_name = request.args.get('file')
     filename = secure_filename(predict_file_name)
     if filename != '':
         file = os.path.join(app.config['PREDICT_PATH'], filename)
