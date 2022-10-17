@@ -29,7 +29,7 @@ def upload_files():
 
 
 @app.route('/', methods=['GET'])
-def upload_files():
+def prediction():
     predict_file_name = request.args.get('file_name')
     filename = secure_filename(predict_file_name)
     if filename != '':
