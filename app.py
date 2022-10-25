@@ -10,7 +10,7 @@ app.config['UPLOAD_PATH'] = 'uploads'
 app.config['PREDICT_PATH'] = 'predictions'
 
 
-@app.route('/', methods=['POST'])
+@app.route('/swe/numberprediction/rest/data/v1.0/json/en/assignment01_model/', methods=['POST'])
 def upload_files():
     uploaded_file = request.files['file']
     filename = secure_filename(uploaded_file.filename)
@@ -28,7 +28,7 @@ def upload_files():
     abort(500)
 
 
-@app.route('/', methods=['GET'])
+@app.route('/swe/numberprediction/rest/data/v1.0/json/en/assignment01_model/', methods=['GET'])
 def prediction():
     predict_file_name = request.args.get('file')
     filename = secure_filename(predict_file_name)
